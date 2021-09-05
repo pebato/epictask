@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Epic Tasks</title>
+</head>
+<body>
+	<h1>EPIC TASKS</h1>
+	<h2>Tarefas</h2>
+	
+	<p th:text="${task}"></p>
+	
+	<a href="/task/new">Nova Tarefa</a>
+	
+	<ul th:each="task : ${tasks}">
+		<li>
+			<p th:text="${task.title}"></p>
+			<p th:text="${task.description}"></p>
+			<p th:text="${task.points}"></p>
+			<button>pegar</button>
+		</li>
+	</ul>
+	
+	
+</body>
+</html>
